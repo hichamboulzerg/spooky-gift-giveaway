@@ -17,7 +17,7 @@ const Index = () => {
               🎃 Special treat for our amazing community!
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
-              We're giving you a chance to win a $750 Gift Card — and enjoy spooky savings all season long!
+              We're giving you a chance to win a $750 Walmart Gift Card — and enjoy spooky savings all season long!
             </p>
           </div>
 
