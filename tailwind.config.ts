@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        halloween: {
+          orange: "hsl(var(--halloween-orange))",
+          dark: "hsl(var(--halloween-dark))",
+          cream: "hsl(var(--halloween-cream))",
+          glow: "hsl(var(--halloween-glow))",
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
