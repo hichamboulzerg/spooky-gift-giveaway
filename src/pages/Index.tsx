@@ -23,7 +23,7 @@ const Index = () => {
 
           {/* Main Title */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-halloween-dark leading-tight">
-            Get Your $750 Halloween Gift Card!
+            Get Your $750 Walmart Halloween Gift Card!
           </h1>
 
           {/* Gift Card Visual */}
