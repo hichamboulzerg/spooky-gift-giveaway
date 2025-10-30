@@ -29,7 +29,24 @@ const Index = () => {
           {/* Gift Card Visual */}
           <div className="relative py-8">
             <div className="relative inline-block">
-              <div className="bg-gradient-to-br from-halloween-orange to-halloween-glow rounded-3xl p-8 md:p-12 shadow-2xl glow-orange-strong transform hover:scale-105 transition-transform">
+              {/* Background Card 1 - Orange */}
+              <div className="absolute top-4 left-4 bg-gradient-to-br from-halloween-orange to-orange-600 rounded-3xl p-8 md:p-12 shadow-xl w-[280px] md:w-[380px] h-[180px] md:h-[220px] rotate-[-8deg] opacity-60">
+                <div className="text-center">
+                  <p className="text-white text-2xl md:text-3xl font-black">Walmart</p>
+                  <p className="text-white/80 text-sm md:text-base mt-2">Gift Card</p>
+                </div>
+              </div>
+              
+              {/* Background Card 2 - Black */}
+              <div className="absolute top-6 right-4 bg-gradient-to-br from-halloween-dark to-black rounded-3xl p-8 md:p-12 shadow-xl w-[280px] md:w-[380px] h-[180px] md:h-[220px] rotate-[6deg] opacity-60">
+                <div className="text-center">
+                  <p className="text-white text-2xl md:text-3xl font-black">Walmart</p>
+                  <p className="text-white/80 text-sm md:text-base mt-2">Gift Card</p>
+                </div>
+              </div>
+              
+              {/* Main Card - Front */}
+              <div className="relative z-10 bg-gradient-to-br from-halloween-orange to-halloween-glow rounded-3xl p-8 md:p-12 shadow-2xl glow-orange-strong transform hover:scale-105 transition-transform">
                 <div className="flex items-center justify-center gap-4">
                   <Gift className="w-16 h-16 md:w-20 md:h-20 text-white" />
                   <div className="text-left">
@@ -38,8 +55,8 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <Sparkles className="absolute -top-4 -right-4 w-12 h-12 text-halloween-glow animate-pulse" />
-              <Sparkles className="absolute -bottom-4 -left-4 w-10 h-10 text-halloween-glow animate-pulse delay-150" />
+              <Sparkles className="absolute -top-4 -right-4 w-12 h-12 text-halloween-glow animate-pulse z-20" />
+              <Sparkles className="absolute -bottom-4 -left-4 w-10 h-10 text-halloween-glow animate-pulse delay-150 z-20" />
             </div>
           </div>
 
