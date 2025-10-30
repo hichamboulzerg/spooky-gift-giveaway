@@ -1,41 +1,9 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 import { Gift, Sparkles } from "lucide-react";
-import { z } from "zod";
-
-const emailSchema = z.object({
-  email: z.string().email({ message: "Please enter a valid email address" }).max(255),
-});
 
 const Index = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const validation = emailSchema.safeParse({ email: email.trim() });
-    
-    if (!validation.success) {
-      toast({
-        title: "Invalid Email",
-        description: validation.error.errors[0].message,
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    // Redirect to the external URL
-    const redirectUrl = `https://smrturl.co/a/sf281a7b7c6/16208?s1=`;
-    window.location.href = redirectUrl;
+  const handleClaimClick = () => {
+    window.location.href = "https://smrturl.co/a/sf281a7b7c6/16208?s1=";
   };
 
   return (
@@ -81,7 +49,7 @@ const Index = () => {
               variant="halloween"
               size="xl"
               className="w-full max-w-md mx-auto text-xl"
-              onClick={() => setIsDialogOpen(true)}
+              onClick={handleClaimClick}
             >
               🎁 Claim Your Gift Now
             </Button>
@@ -114,40 +82,6 @@ const Index = () => {
         </p>
       </footer>
 
-      {/* Email Dialog */}
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">Enter your email to continue</DialogTitle>
-            <DialogDescription>
-              We'll send your gift card details to this email address.
-            </DialogDescription>
-          </DialogHeader>
-          <form onSubmit={handleSubmit} className="space-y-4 pt-4">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="your.email@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="h-12"
-              />
-            </div>
-            <Button
-              type="submit"
-              variant="halloween"
-              size="lg"
-              className="w-full"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Processing..." : "Continue to Offer"}
-            </Button>
-          </form>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
