@@ -27,26 +27,44 @@ const Index = () => {
           </h1>
 
           {/* Gift Card Visual */}
-          <div className="relative py-8">
+          <div className="relative py-16 md:py-20">
             <div className="relative inline-block">
-              {/* Background Card 1 - Orange */}
-              <div className="absolute top-4 left-4 bg-gradient-to-br from-halloween-orange to-orange-600 rounded-3xl p-8 md:p-12 shadow-xl w-[280px] md:w-[380px] h-[180px] md:h-[220px] rotate-[-8deg] opacity-60">
-                <div className="text-center">
-                  <p className="text-white text-2xl md:text-3xl font-black">Walmart</p>
-                  <p className="text-white/80 text-sm md:text-base mt-2">Gift Card</p>
+              {/* Background Card 1 - Black Walmart Card */}
+              <div className="absolute -top-8 -left-12 md:-left-16 bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl w-[200px] md:w-[280px] h-[125px] md:h-[175px] rotate-[-15deg] border border-gray-700">
+                <div className="p-4 md:p-6 flex flex-col justify-between h-full">
+                  <div className="flex items-center gap-2">
+                    <div className="text-yellow-400 font-black text-xl md:text-3xl">Walmart</div>
+                  </div>
+                  <div className="flex justify-between items-end">
+                    <div className="text-white/80 text-xs md:text-sm">Gift Card</div>
+                    <div className="text-yellow-400">
+                      <svg className="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L9 9H2l6 4-2 7 6-4 6 4-2-7 6-4h-7z"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              {/* Background Card 2 - Black */}
-              <div className="absolute top-6 right-4 bg-gradient-to-br from-halloween-dark to-black rounded-3xl p-8 md:p-12 shadow-xl w-[280px] md:w-[380px] h-[180px] md:h-[220px] rotate-[6deg] opacity-60">
-                <div className="text-center">
-                  <p className="text-white text-2xl md:text-3xl font-black">Walmart</p>
-                  <p className="text-white/80 text-sm md:text-base mt-2">Gift Card</p>
+              {/* Background Card 2 - Orange Walmart Card */}
+              <div className="absolute -top-4 -right-12 md:-right-16 bg-gradient-to-br from-halloween-orange to-orange-600 rounded-2xl shadow-2xl w-[200px] md:w-[280px] h-[125px] md:h-[175px] rotate-[12deg] border border-orange-700">
+                <div className="p-4 md:p-6 flex flex-col justify-between h-full">
+                  <div className="flex items-center gap-2">
+                    <div className="text-white font-black text-xl md:text-3xl">Walmart</div>
+                  </div>
+                  <div className="flex justify-between items-end">
+                    <div className="text-white/90 text-xs md:text-sm">Gift Card</div>
+                    <div className="text-yellow-300">
+                      <svg className="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L9 9H2l6 4-2 7 6-4 6 4-2-7 6-4h-7z"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              {/* Main Card - Front */}
-              <div className="relative z-10 bg-gradient-to-br from-halloween-orange to-halloween-glow rounded-3xl p-8 md:p-12 shadow-2xl glow-orange-strong transform hover:scale-105 transition-transform">
+              {/* Main Card - Front with $750 Value */}
+              <div className="relative z-10 bg-gradient-to-br from-halloween-orange via-orange-500 to-halloween-glow rounded-3xl p-8 md:p-12 shadow-2xl glow-orange-strong transform hover:scale-105 transition-transform border-4 border-orange-600">
                 <div className="flex items-center justify-center gap-4">
                   <Gift className="w-16 h-16 md:w-20 md:h-20 text-white" />
                   <div className="text-left">
