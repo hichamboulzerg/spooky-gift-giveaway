@@ -27,7 +27,7 @@ const Index = () => {
           </h1>
 
           {/* Gift Card Visual */}
-          <div className="relative py-16 md:py-20">
+          <div className="relative py-8 md:py-12">
             <div className="relative inline-block">
               {/* Background Card 1 - Black Walmart Card */}
               <div className="absolute -top-8 -left-12 md:-left-16 bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-2xl w-[200px] md:w-[280px] h-[125px] md:h-[175px] rotate-[-15deg] border border-gray-700">
