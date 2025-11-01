@@ -3,7 +3,7 @@ import { Gift, Sparkles } from "lucide-react";
 
 const Index = () => {
   const handleClaimClick = () => {
-    window.open("https://smrturl.co/a/sf281a7b7c6/16208?s1=", "_blank");
+    window.open("https://abeautifulrecipes.com/sl/mey3j", "_blank");
   };
 
   return (
